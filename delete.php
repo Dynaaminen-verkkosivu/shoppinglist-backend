@@ -15,5 +15,5 @@ header('HTTP/1.1 200 OK');
 $data = array(':id' => $id);
 print json_encode($data);
 } catch (PDOException $pdoex) {
-    returnError();
+    returnError($pdoex);
 }
